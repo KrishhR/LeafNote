@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>LeafNote - The ultimate blogging app</title>
+  </head>
+  <body>
+    <%- include('./partials/navbar') %>
+
+    <div class="container mt-4">
+      <h1>Create Account</h1>
+
+      <form action="/user/signup" method="post" enctype="multipart/form-data">
+        <label for="profile_image_url">Profile Image</label>
+        <div class="mb-3">
+          <input
+            class="form-control"
+            name="profile_image_url"
+            type="file"
+            id="profile_image_url"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="fullName"
+            id="fullName"
+            aria-describedby="fullName"
+            placeholder="Full name"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="example@domain.com"
+            required
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+            aria-describedby="passwordHelpInline"
+            placeholder="password.."
+            required
+          />
+          <div id="passwordHelpInline" class="form-text">
+            Must be 8-20 characters long.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Account</button>
+      </form>
+    </div>
+
+    <%- include('./partials/scripts.ejs') %>
+  </body>
+</html>

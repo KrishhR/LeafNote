@@ -1,0 +1,33 @@
+{
+  "name": "leafnote",
+  "version": "1.0.0",
+  "description": "The ultimate blogging app",
+  "homepage": "https://github.com/KrishhR/LeafNote#readme",
+  "bugs": {
+    "url": "https://github.com/KrishhR/LeafNote/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishhR/LeafNote.git"
+  },
+  "license": "ISC",
+  "author": "Krishnam Rastogi (krishnam.rastogi60@gmail.com)",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

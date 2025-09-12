@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>LeafNote - The ultimate blogging app</title>
+  </head>
+
+  <body>
+    <%- include('./partials/navbar') %>
+
+    <div class="container mt-3">
+      <h1>Add Blog</h1>
+
+      <form action="/blog" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="blogTitle">Title</label>
+          <input
+            type="text"
+            name="blogTitle"
+            class="form-control"
+            id="blogTitle"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="blogBody">Body</label>
+          <textarea
+            class="form-control"
+            name="blogBody"
+            id="blogBody"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="coverImageUrl">Choose Cover Image</label>
+          <input
+            class="form-control"
+            name="coverImageUrl"
+            type="file"
+            id="coverImageUrl"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Blog</button>
+      </form>
+    </div>
+
+    <%- include('./partials/scripts.ejs') %>
+  </body>
+</html>
